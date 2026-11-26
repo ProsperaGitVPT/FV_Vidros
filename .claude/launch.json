@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "site",
+      "runtimeExecutable": "powershell",
+      "runtimeArgs": ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "C:\\Users\\VINICI~1\\AppData\\Local\\Temp\\claude\\4b080dbc602ad1a2\\17d946e6-abf9-4e7c-b114-2873c95f033b\\scratchpad\\serve.ps1", "-Root", "C:\\Users\\Vinicius-HS\\Documents\\GitHub\\FV_Vidros\\main", "-Port", "5731"],
+      "port": 5731
+    }
+  ]
+}
