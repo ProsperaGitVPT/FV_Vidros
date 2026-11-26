@@ -45,3 +45,35 @@ if (selMarca && selModelo) {
   });
   selMarca.dispatchEvent(new Event("change"));
 }
+
+// 5. Abas do painel de busca (Buscar pela Placa / Selecionar Veículo)
+const abas = document.querySelectorAll("[data-aba]");
+abas.forEach((aba) => aba.addEventListener("click", () => {
+  abas.forEach((a) => {
+    const ativa = a === aba;
+    a.classList.toggle("ativa", ativa);
+    a.setAttribute("aria-selected", ativa);
+  });
+  document.querySelectorAll("[data-painel]").forEach((p) => { p.hidden = p.dataset.painel !== aba.dataset.aba; });
+}));
+
+// 6. Busca pela placa: abre o WhatsApp com a placa digitada
+const formPlaca = document.getElementById("formPlaca");
+if (formPlaca) {
+  const campo = formPlaca.elements.placa;
+  campo.addEventListener("input", () => {
+    campo.setCustomValidity("");
+    campo.value = campo.value.toUpperCase().replace(/[^A-Z0-9-]/g, "");
+  });
+  formPlaca.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const placa = campo.value.replace(/-/g, "");
+    // Aceita placa antiga (ABC1234) e Mercosul (ABC1D23)
+    if (!/^[A-Z]{3}[0-9][A-Z0-9][0-9]{2}$/.test(placa)) {
+      campo.setCustomValidity("Digite uma placa válida. Ex.: ABC1D23");
+      campo.reportValidity();
+      return;
+    }
+    window.open(linkWhats(`Olá! Procuro peças para o veículo de placa ${placa}. Pode me ajudar?`), "_blank", "noopener");
+  });
+}

@@ -21,6 +21,6 @@ const PRODUTOS = [
     marca: "Hyundai", modelo: "HB20", anoIni: 2012, anoFim: 2019, img: "" },
   { id: 5, nome: "Para-brisa Toyota Corolla", tipo: "parabrisa", fabricante: "Pilkington",
     marca: "Toyota", modelo: "Corolla", anoIni: 2015, anoFim: 2019, img: "" },
-  { id: 6, nome: "Palheta limpador par 21\"/19\"", tipo: "acessorio", fabricante: "Bosch",
+  { id: 6, nome: "Palheta limpador par 21\"/19\"", tipo: "palheta", fabricante: "Bosch",
     marca: "Universal", modelo: "Universal", anoIni: 1990, anoFim: 2030, img: "" },
 ];

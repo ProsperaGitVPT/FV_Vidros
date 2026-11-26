@@ -5,7 +5,10 @@ const form = document.getElementById("formFiltros");
 const lista = document.getElementById("listaProdutos");
 const contador = document.getElementById("contador");
 
-const NOMES_TIPO = { parabrisa: "Para-brisa", traseiro: "Vidro traseiro", porta: "Vidro de porta", acessorio: "Acessório" };
+const NOMES_TIPO = {
+  parabrisa: "Para-brisa", porta: "Vidro lateral", traseiro: "Vidro traseiro", teto: "Teto solar",
+  retrovisor: "Retrovisor", palheta: "Palheta", acessorio: "Acessório",
+};
 
 // Lê filtros vindos da URL (ex.: produtos.html?tipo=parabrisa&marca=Fiat)
 function aplicarParametrosDaURL() {

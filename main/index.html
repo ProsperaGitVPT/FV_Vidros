@@ -4,95 +4,203 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FV Vidros Automotivos & Acessórios</title>
-  <meta name="description" content="Para-brisas, vidros de porta, vidros traseiros, retrovisores e acessórios automotivos. Orçamento rápido pelo WhatsApp.">
+  <meta name="description" content="Para-brisas, vidros laterais e traseiros, tetos solares, retrovisores, palhetas e acessórios automotivos. Botucatu – SP, entrega para todo o Brasil.">
   <link rel="icon" href="img/favicon/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
   <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
   <link rel="manifest" href="img/favicon/site.webmanifest">
-  <meta name="theme-color" content="#0b3d5c">
+  <meta name="theme-color" content="#00101a">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Montserrat:ital,wght@1,800;1,900&display=swap">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+  <!-- ===== ÍCONES (usados com <svg><use href="#i-nome"/></svg>) ===== -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+      <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></symbol>
+      <symbol id="i-truck" viewBox="0 0 24 24"><path d="M2 6h11v10H2z"/><path d="M13 9h4l4 4v3h-8z"/><circle cx="6" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></symbol>
+      <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16.5 16.5L21 21"/></symbol>
+      <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></symbol>
+      <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-7-4.5-9-9a4.8 4.8 0 0 1 9-3 4.8 4.8 0 0 1 9 3c-2 4.5-9 9-9 9z"/></symbol>
+      <symbol id="i-cart" viewBox="0 0 24 24"><path d="M2 3h3l2.5 12h11l2-8H6.2"/><circle cx="9" cy="19.5" r="1.5"/><circle cx="17" cy="19.5" r="1.5"/></symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+      <symbol id="i-parabrisa" viewBox="0 0 24 24"><path d="M3 8c6-2 12-2 18 0l-2 9c-4.6-1-9.4-1-14 0z"/></symbol>
+      <symbol id="i-lateral" viewBox="0 0 24 24"><path d="M3 18L9.5 6H20v12z"/></symbol>
+      <symbol id="i-traseiro" viewBox="0 0 24 24"><path d="M4 8c5-1.5 11-1.5 16 0l1 8c-6 1.2-12 1.2-18 0z"/></symbol>
+      <symbol id="i-teto" viewBox="0 0 24 24"><path d="M6 6h15l-3 12H3z"/><path d="M8 8.5h10.2l-1.8 7H6.2z"/></symbol>
+      <symbol id="i-retrovisor" viewBox="0 0 24 24"><path d="M3 11c0-3 2-5 5-5h6c3 0 5 2 5 5s-2 5-5 5H8c-3 0-5-2-5-5z"/><path d="M19 10h2v5"/></symbol>
+      <symbol id="i-palheta" viewBox="0 0 24 24"><path d="M3 8l18 4"/><path d="M5 9.5l14 3"/><path d="M12 11v8M10 19h4"/></symbol>
+      <symbol id="i-ferramenta" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.8-3.8a6 6 0 0 1-7.9 7.9l-6.9 6.9a2.1 2.1 0 0 1-3-3l6.9-6.9a6 6 0 0 1 7.9-7.9z"/></symbol>
+      <symbol id="i-cartao" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18M7 15h4"/></symbol>
+      <symbol id="i-atendimento" viewBox="0 0 24 24"><path d="M4 14v-2a8 8 0 0 1 16 0v2"/><path d="M4 14h3v5H4zM17 14h3v5h-3z"/><path d="M20 19c0 1.5-2 2.5-5 2.5"/></symbol>
+      <symbol id="i-engrenagem" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9L7 7M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/><circle cx="12" cy="12" r="6.5"/></symbol>
+      <symbol id="i-caixa" viewBox="0 0 24 24"><path d="M3 7.5L12 3l9 4.5v9L12 21l-9-4.5z"/><path d="M3 7.5l9 4.5 9-4.5M12 12v9M7.5 5.2l9 4.6"/></symbol>
+      <symbol id="i-troca" viewBox="0 0 24 24"><path d="M20 11a8 8 0 0 0-14.5-4.5L4 8"/><path d="M4 3v5h5"/><path d="M4 13a8 8 0 0 0 14.5 4.5L20 16"/><path d="M20 21v-5h-5"/></symbol>
+      <symbol id="i-seta" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></symbol>
+      <symbol id="i-carro" viewBox="0 0 24 24"><path d="M5 11l1.5-4.5A2 2 0 0 1 8.4 5h7.2a2 2 0 0 1 1.9 1.5L19 11"/><rect x="3" y="11" width="18" height="6" rx="2"/><path d="M5 17v2M19 17v2"/><circle cx="7.5" cy="14" r="1"/><circle cx="16.5" cy="14" r="1"/></symbol>
+      <symbol id="i-placa" viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 10v4M9 10h2v2H9v2h2M14 10h2v4h-2M14 12h2"/></symbol>
+    </defs>
+  </svg>
+
   <!-- ===== CABEÇALHO ===== -->
-  <header class="topo">
-    <div class="container topo__linha">
-      <a href="index.html" class="logo">FV <span>Vidros</span></a>
-
-      <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
-
-      <nav class="menu" aria-label="Principal">
-        <a href="index.html" class="ativo">Início</a>
-        <a href="produtos.html">Produtos</a>
-        <a href="#servicos">Serviços</a>
-        <a href="#sobre">Sobre</a>
-        <a href="#contato">Contato</a>
-      </nav>
-
-      <a class="btn btn--whats js-whats" href="#" data-msg="Olá! Vim pelo site e gostaria de um orçamento.">WhatsApp</a>
+  <header class="site-topo">
+    <div class="topbar">
+      <div class="container topbar__linha">
+        <span class="topbar__item"><svg class="ic ic--ciano"><use href="#i-pin"/></svg> Botucatu – SP</span>
+        <span class="topbar__slogan">Especialistas em Vidros Automotivos e Acessórios</span>
+        <span class="topbar__selos">
+          <span class="topbar__item"><svg class="ic ic--ciano"><use href="#i-shield"/></svg> Compra Segura</span>
+          <span class="topbar__item"><svg class="ic ic--ciano"><use href="#i-truck"/></svg> Entrega para Todo o Brasil</span>
+        </span>
+      </div>
     </div>
+
+    <div class="cabecalho">
+      <div class="container cabecalho__linha">
+        <a href="index.html" class="logo">
+          <img src="img/logo-fv-vidros.png" width="1200" height="467" alt="FV Vidros Automotivos & Acessórios">
+        </a>
+
+        <form class="busca-topo" action="produtos.html" method="get" role="search">
+          <svg class="ic"><use href="#i-search"/></svg>
+          <input type="search" name="q" placeholder="Busque por produto, veículo ou código..." aria-label="Buscar produtos">
+        </form>
+
+        <nav class="atalhos" aria-label="Atalhos">
+          <a class="atalho js-whats" href="#" data-msg="Olá! Gostaria de atendimento.">
+            <svg class="ic"><use href="#i-user"/></svg><span>Minha Conta</span>
+          </a>
+          <a class="atalho" href="produtos.html">
+            <svg class="ic"><use href="#i-heart"/></svg><span>Favoritos</span>
+          </a>
+          <a class="atalho js-whats" href="#" data-msg="Olá! Gostaria de fazer um pedido.">
+            <span class="atalho__carrinho"><svg class="ic"><use href="#i-cart"/></svg><b class="badge">0</b></span><span>Carrinho</span>
+          </a>
+        </nav>
+
+        <button class="menu-toggle" aria-label="Abrir menu de categorias" aria-expanded="false">
+          <svg class="ic"><use href="#i-menu"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <nav class="categorias-nav" aria-label="Categorias">
+      <div class="container menu">
+        <a class="cat-todas" href="produtos.html"><svg class="ic"><use href="#i-menu"/></svg> Todas as Categorias</a>
+        <a href="produtos.html?tipo=parabrisa"><svg class="ic"><use href="#i-parabrisa"/></svg> Para-brisas</a>
+        <a href="produtos.html?tipo=porta"><svg class="ic"><use href="#i-lateral"/></svg> Laterais</a>
+        <a href="produtos.html?tipo=traseiro"><svg class="ic"><use href="#i-traseiro"/></svg> Traseiros</a>
+        <a href="produtos.html?tipo=teto"><svg class="ic"><use href="#i-teto"/></svg> Tetos Solares</a>
+        <a href="produtos.html?tipo=retrovisor"><svg class="ic"><use href="#i-retrovisor"/></svg> Retrovisores</a>
+        <a href="produtos.html?tipo=palheta"><svg class="ic"><use href="#i-palheta"/></svg> Palhetas</a>
+        <a href="produtos.html?tipo=acessorio"><svg class="ic"><use href="#i-ferramenta"/></svg> Acessórios</a>
+      </div>
+    </nav>
   </header>
 
   <main>
-    <!-- ===== BANNER ===== -->
-    <section class="banner">
-      <picture>
-        <source media="(max-width: 600px)" srcset="img/banner/banner-site-mobile-1080x1080.jpg">
-        <img src="img/banner/banner-site-1920x800.jpg" width="1920" height="800"
-             alt="FV Vidros Automotivos & Acessórios">
-      </picture>
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <img class="hero__carro" src="img/hero/carro-hero.jpg" width="1560" height="568" alt="" aria-hidden="true">
+      <div class="container hero__conteudo">
+        <h1>O vidro certo <span>para o seu veículo</span></h1>
+        <p>Qualidade, segurança e a melhor solução em vidros automotivos e acessórios.</p>
+      </div>
     </section>
 
-    <!-- ===== HERO + BUSCA POR VEÍCULO ===== -->
-    <section class="hero">
-      <div class="container hero__grid">
-        <div>
-          <h1>Vidro quebrado? A gente resolve hoje.</h1>
-          <p>Para-brisas, vidros laterais e traseiros com instalação e garantia. Peça seu orçamento em minutos.</p>
-          <a class="btn btn--primario js-whats" href="#" data-msg="Olá! Preciso de um orçamento de vidro.">Pedir orçamento</a>
+    <!-- ===== BUSCA + BENEFÍCIOS ===== -->
+    <section class="painel-area">
+      <div class="container painel-grid">
+        <div class="busca-painel">
+          <div class="abas" role="tablist">
+            <button class="aba ativa" type="button" role="tab" aria-selected="true" data-aba="placa">
+              <svg class="ic"><use href="#i-placa"/></svg> Buscar pela Placa
+            </button>
+            <button class="aba" type="button" role="tab" aria-selected="false" data-aba="veiculo">
+              <svg class="ic"><use href="#i-carro"/></svg> Selecionar Veículo
+            </button>
+          </div>
+
+          <form class="painel painel--placa" id="formPlaca" data-painel="placa">
+            <label class="placa">
+              <span class="placa__faixa"><small>MERCOSUL</small> BRASIL <i class="placa__bandeira" aria-hidden="true"></i></span>
+              <span class="placa__corpo">
+                <small>BR</small>
+                <input name="placa" maxlength="8" placeholder="ABC1D23" autocomplete="off" aria-label="Placa do veículo" required>
+              </span>
+            </label>
+            <button class="btn btn--buscar" type="submit"><svg class="ic"><use href="#i-search"/></svg> Buscar Peças</button>
+          </form>
+
+          <form class="painel painel--veiculo" action="produtos.html" method="get" data-painel="veiculo" hidden>
+            <label>Tipo de peça
+              <select name="tipo">
+                <option value="">Todos</option>
+                <option value="parabrisa">Para-brisa</option>
+                <option value="porta">Vidro lateral</option>
+                <option value="traseiro">Vidro traseiro</option>
+                <option value="teto">Teto solar</option>
+                <option value="retrovisor">Retrovisor</option>
+                <option value="palheta">Palheta</option>
+                <option value="acessorio">Acessórios</option>
+              </select>
+            </label>
+            <label>Marca
+              <select name="marca" id="selMarca"><option value="">Todas</option></select>
+            </label>
+            <label>Modelo
+              <select name="modelo" id="selModelo"><option value="">Todos</option></select>
+            </label>
+            <button class="btn btn--buscar" type="submit"><svg class="ic"><use href="#i-search"/></svg> Buscar Peças</button>
+          </form>
         </div>
 
-        <form class="busca-veiculo" action="produtos.html" method="get">
-          <h2>Encontre a peça do seu carro</h2>
-          <label>Tipo de peça
-            <select name="tipo">
-              <option value="">Todos</option>
-              <option value="parabrisa">Para-brisa</option>
-              <option value="traseiro">Vidro traseiro</option>
-              <option value="porta">Vidro de porta</option>
-              <option value="acessorio">Acessórios</option>
-            </select>
-          </label>
-          <label>Marca do veículo
-            <select name="marca" id="selMarca"><option value="">Todas</option></select>
-          </label>
-          <label>Modelo
-            <select name="modelo" id="selModelo"><option value="">Todos</option></select>
-          </label>
-          <button class="btn btn--primario" type="submit">Buscar</button>
-        </form>
+        <ul class="beneficios">
+          <li><svg class="ic"><use href="#i-truck"/></svg>Entrega em todo o Brasil</li>
+          <li><svg class="ic"><use href="#i-shield"/></svg>Compra Segura</li>
+          <li><svg class="ic"><use href="#i-cartao"/></svg>Diversas Formas de Pagamento</li>
+          <li><svg class="ic"><use href="#i-atendimento"/></svg>Atendimento Especializado</li>
+        </ul>
       </div>
     </section>
 
     <!-- ===== CATEGORIAS ===== -->
-    <section class="secao">
+    <section class="secao secao--categorias">
       <div class="container">
-        <h2 class="secao__titulo">Categorias</h2>
-        <div class="grid-cards">
-          <a class="card-cat" href="produtos.html?tipo=parabrisa">Para-brisas</a>
-          <a class="card-cat" href="produtos.html?tipo=traseiro">Vidros traseiros</a>
-          <a class="card-cat" href="produtos.html?tipo=porta">Vidros de porta</a>
-          <a class="card-cat" href="produtos.html?tipo=acessorio">Acessórios</a>
+        <h2 class="titulo-linha">Compre por Categoria</h2>
+        <div class="grid-categorias">
+          <a class="card-cat" href="produtos.html?tipo=parabrisa"><img src="img/categorias/para-brisas.png" alt="" loading="lazy"><span>Para-brisas <svg class="ic"><use href="#i-seta"/></svg></span></a>
+          <a class="card-cat" href="produtos.html?tipo=porta"><img src="img/categorias/laterais.png" alt="" loading="lazy"><span>Laterais <svg class="ic"><use href="#i-seta"/></svg></span></a>
+          <a class="card-cat" href="produtos.html?tipo=traseiro"><img src="img/categorias/traseiros.png" alt="" loading="lazy"><span>Traseiros <svg class="ic"><use href="#i-seta"/></svg></span></a>
+          <a class="card-cat" href="produtos.html?tipo=teto"><img src="img/categorias/tetos-solares.png" alt="" loading="lazy"><span>Tetos Solares <svg class="ic"><use href="#i-seta"/></svg></span></a>
+          <a class="card-cat" href="produtos.html?tipo=retrovisor"><img src="img/categorias/retrovisores.png" alt="" loading="lazy"><span>Retrovisores <svg class="ic"><use href="#i-seta"/></svg></span></a>
+          <a class="card-cat" href="produtos.html?tipo=palheta"><img src="img/categorias/palhetas.png" alt="" loading="lazy"><span>Palhetas <svg class="ic"><use href="#i-seta"/></svg></span></a>
+          <a class="card-cat" href="produtos.html?tipo=acessorio"><img src="img/categorias/acessorios.png" alt="" loading="lazy"><span>Acessórios <svg class="ic"><use href="#i-seta"/></svg></span></a>
         </div>
       </div>
+    </section>
+
+    <!-- ===== FAIXA DE GARANTIAS ===== -->
+    <section class="faixa">
+      <img class="faixa__carro" src="img/hero/carro-faixa.jpg" width="600" height="148" alt="" aria-hidden="true">
+      <ul class="container faixa__itens">
+        <li><svg class="ic"><use href="#i-shield"/></svg>Vidros de Alta Qualidade e Procedência</li>
+        <li><svg class="ic"><use href="#i-engrenagem"/></svg>Compatibilidade Garantida</li>
+        <li><svg class="ic"><use href="#i-caixa"/></svg>Embalagem Reforçada para Maior Segurança</li>
+        <li><svg class="ic"><use href="#i-troca"/></svg>Troca Fácil e Segura</li>
+      </ul>
     </section>
 
     <!-- ===== SERVIÇOS ===== -->
     <section class="secao secao--clara" id="servicos">
       <div class="container">
-        <h2 class="secao__titulo">Serviços</h2>
+        <h2 class="titulo-linha">Serviços</h2>
         <div class="grid-cards">
           <article class="card"><h3>Troca de para-brisa</h3><p>Instalação com cola de alta resistência e liberação rápida.</p></article>
           <article class="card"><h3>Reparo de trincas</h3><p>Pequenas trincas reparadas sem precisar trocar o vidro.</p></article>
@@ -106,7 +214,7 @@
     <section class="secao" id="sobre">
       <div class="container sobre">
         <div>
-          <h2 class="secao__titulo">Sobre a FV</h2>
+          <h2 class="titulo-linha">Sobre a FV</h2>
           <p>[Escrever aqui a história da empresa: desde quando atende, diferenciais, marcas com que trabalha.]</p>
         </div>
         <ul class="destaques">
@@ -121,8 +229,8 @@
     <section class="secao secao--clara" id="contato">
       <div class="container contato">
         <div>
-          <h2 class="secao__titulo">Contato</h2>
-          <p><strong>Endereço:</strong> [Rua, número – Bairro, Cidade/UF]</p>
+          <h2 class="titulo-linha">Contato</h2>
+          <p><strong>Endereço:</strong> [Rua, número – Bairro], Botucatu – SP</p>
           <p><strong>Telefone:</strong> [(00) 00000-0000]</p>
           <p><strong>Horário:</strong> [Seg a Sex 8h–18h · Sáb 8h–12h]</p>
           <a class="btn btn--whats js-whats" href="#" data-msg="Olá! Gostaria de mais informações.">Falar no WhatsApp</a>
@@ -134,7 +242,10 @@
   </main>
 
   <footer class="rodape">
-    <div class="container">© <span id="ano"></span> FV Vidros Automotivos & Acessórios</div>
+    <div class="container rodape__linha">
+      <span>© <span id="ano"></span> FV Vidros Automotivos & Acessórios · Botucatu – SP</span>
+      <nav aria-label="Institucional"><a href="#servicos">Serviços</a><a href="#sobre">Sobre</a><a href="#contato">Contato</a></nav>
+    </div>
   </footer>
 
   <a class="whats-flutuante js-whats" href="#" data-msg="Olá! Vim pelo site." aria-label="WhatsApp">💬</a>
