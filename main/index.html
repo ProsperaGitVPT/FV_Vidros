@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FV Vidros Automotivos & Acessórios</title>
+  <meta name="description" content="Para-brisas, vidros de porta, vidros traseiros, retrovisores e acessórios automotivos. Orçamento rápido pelo WhatsApp.">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== CABEÇALHO ===== -->
+  <header class="topo">
+    <div class="container topo__linha">
+      <a href="index.html" class="logo">FV <span>Vidros</span></a>
+
+      <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+
+      <nav class="menu" aria-label="Principal">
+        <a href="index.html" class="ativo">Início</a>
+        <a href="produtos.html">Produtos</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <a class="btn btn--whats js-whats" href="#" data-msg="Olá! Vim pelo site e gostaria de um orçamento.">WhatsApp</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== HERO + BUSCA POR VEÍCULO ===== -->
+    <section class="hero">
+      <div class="container hero__grid">
+        <div>
+          <h1>Vidro quebrado? A gente resolve hoje.</h1>
+          <p>Para-brisas, vidros laterais e traseiros com instalação e garantia. Peça seu orçamento em minutos.</p>
+          <a class="btn btn--primario js-whats" href="#" data-msg="Olá! Preciso de um orçamento de vidro.">Pedir orçamento</a>
+        </div>
+
+        <form class="busca-veiculo" action="produtos.html" method="get">
+          <h2>Encontre a peça do seu carro</h2>
+          <label>Tipo de peça
+            <select name="tipo">
+              <option value="">Todos</option>
+              <option value="parabrisa">Para-brisa</option>
+              <option value="traseiro">Vidro traseiro</option>
+              <option value="porta">Vidro de porta</option>
+              <option value="acessorio">Acessórios</option>
+            </select>
+          </label>
+          <label>Marca do veículo
+            <select name="marca" id="selMarca"><option value="">Todas</option></select>
+          </label>
+          <label>Modelo
+            <select name="modelo" id="selModelo"><option value="">Todos</option></select>
+          </label>
+          <button class="btn btn--primario" type="submit">Buscar</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ===== CATEGORIAS ===== -->
+    <section class="secao">
+      <div class="container">
+        <h2 class="secao__titulo">Categorias</h2>
+        <div class="grid-cards">
+          <a class="card-cat" href="produtos.html?tipo=parabrisa">Para-brisas</a>
+          <a class="card-cat" href="produtos.html?tipo=traseiro">Vidros traseiros</a>
+          <a class="card-cat" href="produtos.html?tipo=porta">Vidros de porta</a>
+          <a class="card-cat" href="produtos.html?tipo=acessorio">Acessórios</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SERVIÇOS ===== -->
+    <section class="secao secao--clara" id="servicos">
+      <div class="container">
+        <h2 class="secao__titulo">Serviços</h2>
+        <div class="grid-cards">
+          <article class="card"><h3>Troca de para-brisa</h3><p>Instalação com cola de alta resistência e liberação rápida.</p></article>
+          <article class="card"><h3>Reparo de trincas</h3><p>Pequenas trincas reparadas sem precisar trocar o vidro.</p></article>
+          <article class="card"><h3>Vidros laterais e traseiros</h3><p>Troca de vidros de porta, vigia e quebra-vento.</p></article>
+          <article class="card"><h3>Acessórios</h3><p>Palhetas, retrovisores, máquinas de vidro e mais.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SOBRE ===== -->
+    <section class="secao" id="sobre">
+      <div class="container sobre">
+        <div>
+          <h2 class="secao__titulo">Sobre a FV</h2>
+          <p>[Escrever aqui a história da empresa: desde quando atende, diferenciais, marcas com que trabalha.]</p>
+        </div>
+        <ul class="destaques">
+          <li><strong>+X anos</strong> de experiência</li>
+          <li><strong>Garantia</strong> na instalação</li>
+          <li><strong>Atendimento</strong> no mesmo dia</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== CONTATO ===== -->
+    <section class="secao secao--clara" id="contato">
+      <div class="container contato">
+        <div>
+          <h2 class="secao__titulo">Contato</h2>
+          <p><strong>Endereço:</strong> [Rua, número – Bairro, Cidade/UF]</p>
+          <p><strong>Telefone:</strong> [(00) 00000-0000]</p>
+          <p><strong>Horário:</strong> [Seg a Sex 8h–18h · Sáb 8h–12h]</p>
+          <a class="btn btn--whats js-whats" href="#" data-msg="Olá! Gostaria de mais informações.">Falar no WhatsApp</a>
+        </div>
+        <!-- Cole aqui o iframe do Google Maps (Maps > Compartilhar > Incorporar mapa) -->
+        <div class="mapa">Mapa do Google aqui</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="container">© <span id="ano"></span> FV Vidros Automotivos & Acessórios</div>
+  </footer>
+
+  <a class="whats-flutuante js-whats" href="#" data-msg="Olá! Vim pelo site." aria-label="WhatsApp">💬</a>
+
+  <script src="js/dados.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

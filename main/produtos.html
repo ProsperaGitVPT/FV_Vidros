@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Produtos | FV Vidros Automotivos</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="topo">
+    <div class="container topo__linha">
+      <a href="index.html" class="logo">FV <span>Vidros</span></a>
+      <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+      <nav class="menu" aria-label="Principal">
+        <a href="index.html">Início</a>
+        <a href="produtos.html" class="ativo">Produtos</a>
+        <a href="index.html#servicos">Serviços</a>
+        <a href="index.html#sobre">Sobre</a>
+        <a href="index.html#contato">Contato</a>
+      </nav>
+      <a class="btn btn--whats js-whats" href="#" data-msg="Olá! Vim pelo site e gostaria de um orçamento.">WhatsApp</a>
+    </div>
+  </header>
+
+  <main class="secao">
+    <div class="container catalogo">
+
+      <!-- Filtros (inspirado no "Refinar Resultado" da referência) -->
+      <aside class="filtros">
+        <h2>Refinar resultado</h2>
+        <form id="formFiltros">
+          <label>Buscar
+            <input type="search" name="q" placeholder="Ex.: para-brisa gol">
+          </label>
+          <label>Tipo de peça
+            <select name="tipo">
+              <option value="">Todos</option>
+              <option value="parabrisa">Para-brisa</option>
+              <option value="traseiro">Vidro traseiro</option>
+              <option value="porta">Vidro de porta</option>
+              <option value="acessorio">Acessórios</option>
+            </select>
+          </label>
+          <label>Marca do veículo
+            <select name="marca" id="selMarca"><option value="">Todas</option></select>
+          </label>
+          <label>Modelo
+            <select name="modelo" id="selModelo"><option value="">Todos</option></select>
+          </label>
+          <label>Ano
+            <input type="number" name="ano" placeholder="Ex.: 2018" min="1980" max="2030">
+          </label>
+          <button type="reset" class="btn btn--secundario">Limpar</button>
+        </form>
+      </aside>
+
+      <section>
+        <p class="contador" id="contador"></p>
+        <div class="grid-produtos" id="listaProdutos"></div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="rodape">
+    <div class="container">© <span id="ano"></span> FV Vidros Automotivos & Acessórios</div>
+  </footer>
+
+  <a class="whats-flutuante js-whats" href="#" data-msg="Olá! Vim pelo site." aria-label="WhatsApp">💬</a>
+
+  <script src="js/dados.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/catalogo.js"></script>
+</body>
+</html>

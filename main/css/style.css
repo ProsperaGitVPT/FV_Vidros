@@ -1,0 +1,121 @@
+/* =========================================================
+   1. VARIÁVEIS — troque aqui as cores da marca FV
+   ========================================================= */
+:root {
+  --cor-primaria: #0b3d5c;   /* azul escuro */
+  --cor-destaque: #19a7ce;   /* azul "vidro" */
+  --cor-whats:    #25d366;
+  --cor-texto:    #1d2733;
+  --cor-suave:    #5b6b7a;
+  --cor-fundo:    #ffffff;
+  --cor-fundo-2:  #f2f6f9;
+  --raio: 10px;
+  --sombra: 0 4px 16px rgba(11, 61, 92, .10);
+  --fonte: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+body { font-family: var(--fonte); color: var(--cor-texto); background: var(--cor-fundo);
+       min-height: 100vh; display: flex; flex-direction: column; }
+main { flex: 1; }
+.container { width: min(1180px, 92%); margin-inline: auto; }
+
+/* =========================================================
+   2. BOTÕES
+   ========================================================= */
+.btn { display: inline-block; padding: .7rem 1.3rem; border: 0; border-radius: var(--raio);
+       font-weight: 600; cursor: pointer; transition: transform .15s, opacity .15s; }
+.btn:hover { transform: translateY(-1px); opacity: .92; }
+.btn--primario   { background: var(--cor-destaque); color: #fff; }
+.btn--secundario { background: var(--cor-fundo-2); color: var(--cor-primaria); }
+.btn--whats      { background: var(--cor-whats); color: #fff; }
+
+/* =========================================================
+   3. CABEÇALHO
+   ========================================================= */
+.topo { background: var(--cor-primaria); color: #fff; position: sticky; top: 0; z-index: 10; }
+.topo__linha { display: flex; align-items: center; gap: 1.5rem; padding: .9rem 0; }
+.logo { font-size: 1.5rem; font-weight: 800; }
+.logo span { color: var(--cor-destaque); }
+.menu { display: flex; gap: 1.2rem; margin-left: auto; }
+.menu a { opacity: .85; }
+.menu a:hover, .menu a.ativo { opacity: 1; border-bottom: 2px solid var(--cor-destaque); }
+.menu-toggle { display: none; background: none; border: 0; color: #fff; font-size: 1.6rem; cursor: pointer; }
+
+/* =========================================================
+   4. HERO + BUSCA POR VEÍCULO
+   ========================================================= */
+.hero { background: linear-gradient(135deg, var(--cor-primaria), #126b94); color: #fff; padding: 4rem 0; }
+.hero__grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 3rem; align-items: center; }
+.hero h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); line-height: 1.15; margin-bottom: 1rem; }
+.hero p { margin-bottom: 1.5rem; opacity: .9; }
+
+.busca-veiculo, .filtros { background: #fff; color: var(--cor-texto); padding: 1.5rem;
+                           border-radius: var(--raio); box-shadow: var(--sombra);
+                           display: grid; gap: .9rem; }
+.busca-veiculo h2, .filtros h2 { font-size: 1.15rem; color: var(--cor-primaria); }
+.filtros form { display: grid; gap: .9rem; }
+label { display: grid; gap: .3rem; font-size: .9rem; font-weight: 600; }
+select, input { width: 100%; min-width: 0; padding: .6rem; border: 1px solid #cfd8e0; border-radius: 8px; background: #fff; }
+
+/* =========================================================
+   5. SEÇÕES E CARDS
+   ========================================================= */
+.secao { padding: 3.5rem 0; }
+.secao--clara { background: var(--cor-fundo-2); }
+.secao__titulo { font-size: 1.7rem; color: var(--cor-primaria); margin-bottom: 1.5rem; }
+
+.grid-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; }
+.card, .card-cat { background: #fff; padding: 1.5rem; border-radius: var(--raio); box-shadow: var(--sombra); }
+.card h3 { color: var(--cor-primaria); margin-bottom: .4rem; }
+.card p { color: var(--cor-suave); }
+.card-cat { font-weight: 700; text-align: center; padding: 2rem 1rem; border-top: 4px solid var(--cor-destaque); }
+.card-cat:hover { transform: translateY(-3px); transition: transform .15s; }
+
+.sobre, .contato { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center; }
+.destaques { display: grid; gap: .8rem; }
+.destaques li { background: var(--cor-fundo-2); padding: 1rem; border-radius: var(--raio); }
+.contato p { margin-bottom: .5rem; }
+.contato .btn { margin-top: 1rem; }
+.mapa { min-height: 280px; background: #dde6ed; border-radius: var(--raio);
+        display: grid; place-items: center; color: var(--cor-suave); }
+.mapa iframe { width: 100%; height: 100%; min-height: 280px; border: 0; border-radius: var(--raio); }
+
+/* =========================================================
+   6. CATÁLOGO
+   ========================================================= */
+.catalogo { display: grid; grid-template-columns: 260px 1fr; gap: 2rem; align-items: start; }
+.filtros { position: sticky; top: 90px; }
+.contador { color: var(--cor-suave); margin-bottom: 1rem; }
+.grid-produtos { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1.2rem; }
+.produto { background: #fff; border-radius: var(--raio); box-shadow: var(--sombra); overflow: hidden;
+           display: flex; flex-direction: column; }
+.produto__img { aspect-ratio: 4/3; background: var(--cor-fundo-2); display: grid; place-items: center;
+                color: var(--cor-suave); font-size: .85rem; }
+.produto__img img { width: 100%; height: 100%; object-fit: cover; }
+.produto__info { padding: 1rem; display: grid; gap: .4rem; flex: 1; }
+.produto__info h3 { font-size: 1rem; }
+.produto__compat { font-size: .85rem; color: var(--cor-suave); }
+.produto__marca { font-size: .75rem; font-weight: 700; color: var(--cor-destaque); text-transform: uppercase; }
+.produto .btn { margin: 0 1rem 1rem; text-align: center; }
+.vazio { grid-column: 1 / -1; text-align: center; padding: 3rem; color: var(--cor-suave); }
+
+/* =========================================================
+   7. RODAPÉ + WHATSAPP FLUTUANTE
+   ========================================================= */
+.rodape { background: var(--cor-primaria); color: #fff; padding: 1.5rem 0; text-align: center; font-size: .9rem; }
+.whats-flutuante { position: fixed; right: 1.2rem; bottom: 1.2rem; width: 56px; height: 56px;
+                   border-radius: 50%; background: var(--cor-whats); display: grid; place-items: center;
+                   font-size: 1.6rem; box-shadow: var(--sombra); z-index: 20; }
+
+/* =========================================================
+   8. RESPONSIVO (mobile)
+   ========================================================= */
+@media (max-width: 860px) {
+  .menu-toggle { display: block; margin-left: auto; }
+  .menu { display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column;
+          background: var(--cor-primaria); padding: 1rem 4%; gap: .8rem; }
+  .menu.aberto { display: flex; }
+  .topo__linha > .btn--whats { display: none; }
+  .hero__grid, .sobre, .contato, .catalogo { grid-template-columns: 1fr; }
+  .filtros { position: static; }
+}
