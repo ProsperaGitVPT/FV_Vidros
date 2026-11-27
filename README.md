@@ -33,3 +33,13 @@ fv-vidros/
 - Nomes de classes no padrão BEM: `bloco__elemento--variacao`
 - Cores e medidas sempre por variável (`var(--cor-primaria)`), nunca escritas direto no código
 - Um commit por tarefa no Git, com mensagens descritivas
+
+## Publicação no GitHub Pages
+Este branch (`gh-pages`) tem o `index.html` na raiz do repositório, pronto para o GitHub Pages.
+
+1. No GitHub, abra o repositório → **Settings** → **Pages**.
+2. Em **Build and deployment**, escolha **Source: Deploy from a branch**.
+3. Selecione o branch **gh-pages** e a pasta **/ (root)** → **Save**.
+4. Em 1–2 minutos o site fica disponível em `https://<usuario>.github.io/FV_Vidros/`.
+
+O arquivo `.nojekyll` faz o GitHub servir os arquivos como estão, sem processamento do Jekyll.
