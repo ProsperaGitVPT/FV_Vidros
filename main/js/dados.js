@@ -2,7 +2,7 @@
    CONFIGURAÇÕES DA EMPRESA — preencha com os dados reais
    ========================================================= */
 const CONFIG = {
-  whatsapp: "5500000000000", // DDI + DDD + número, só dígitos. Ex.: 5511987654321
+  whatsapp: "5514996871708",
 };
 
 /* =========================================================
