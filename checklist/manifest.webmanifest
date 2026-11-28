@@ -1,0 +1,17 @@
+{
+  "name": "FV Vidros — Check-list",
+  "short_name": "FV Check-list",
+  "description": "Check-list de entrada de veículos da FV Vidros Automotivos e Acessórios",
+  "lang": "pt-BR",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#00101a",
+  "background_color": "#f1f6f8",
+  "icons": [
+    { "src": "img/android-chrome-192x192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "img/android-chrome-512x512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}
